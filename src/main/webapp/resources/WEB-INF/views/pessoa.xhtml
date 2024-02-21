@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="css" name="styles.css" />
+</h:head>
+<h:body>
+    <h1>Cadastro de Pessoas</h1>
+    <p>Formulário de cadastro de pessoas:</p>
+
+    <h:form>
+        <p>Nome:</p>
+        <p:inputText value="#{pessoaBean.pessoa.nome}" />
+
+        <p>Idade:</p>
+        <p:calendar value="#{pessoaBean.pessoa.idade}" />
+
+        <p>Sexo:</p>
+        <p:inputText value="#{pessoaBean.pessoa.sexo}" />
+
+        <p>Endereço:</p>
+
+        <p:commandButton value="Salvar" action="#{pessoaBean.salvar}" />
+    </h:form>
+
+    <h2>Lista de Pessoas</h2>
+    <p:dataTable value="#{pessoaBean.pessoas}" var="pessoa">
+        <p:column headerText="Nome">
+            <h:outputText value="#{pessoa.nome}" />
+        </p:column>
+        <p:column headerText="Idade">
+            <h:outputText value="#{pessoa.idade}" />
+        </p:column>
+        <p:column headerText="Sexo">
+            <h:outputText value="#{pessoa.sexo}" />
+        </p:column>
+        <p:column headerText="Endereco">
+            <h:outputText value="#{pessoa.endereco}" />
+        </p:column>
+    </p:dataTable>
+</h:body>
+</html>

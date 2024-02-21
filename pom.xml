@@ -7,6 +7,7 @@
     <groupId>org.hbenjamim</groupId>
     <artifactId>pessoas-crud</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -47,5 +48,23 @@
 
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Configuração do maven-war-plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+            <!-- Outros plugins e configurações podem ser adicionados aqui -->
+
+        </plugins>
+    </build>
 
 </project>

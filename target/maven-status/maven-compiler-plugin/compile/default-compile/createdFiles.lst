@@ -1,0 +1,6 @@
+org\hbenjamim\dao\EnderecoDAO.class
+org\hbenjamim\controle\EnderecoBean.class
+org\hbenjamim\modelo\Pessoa.class
+org\hbenjamim\controle\PessoaBean.class
+org\hbenjamim\dao\PessoaDAO.class
+org\hbenjamim\modelo\Endereco.class
